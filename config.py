@@ -6,7 +6,7 @@ class Config:
     '''
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:pepe201@localhost/pitches'
-    UPLOADED_PHOTOS_DEST ='app/static'
+    UPLOADED_PHOTOS_DEST ='app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     # email configurations
     MAIL_SERVER = 'smtp.gmail.com'
