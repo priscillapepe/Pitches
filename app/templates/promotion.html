@@ -8,16 +8,13 @@
 
 {%block content%}
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ranga" rel="stylesheet">
-<div class="jumbotron text-center" style=" padding: 100px 25px; font-family: 'Indie Flower', cursive;">
-    <h1>Product Pitches</h1>
+<div class="jumbotron text-center" style="padding: 100px 25px; font-family: 'Indie Flower', cursive;">
+    <h1>Promotion Pitches</h1>
 </div>
 <div class="container" style="font-family: 'Indie+Flower', cursive;">
     <hr>
     <div class="row">
-        <div class="col-md-12">
-            {{macro.displayPitches(pitches)}}
-        </div>
-        
+        {{macro.pitchesDisplay(pitches)}}
     </div>
 </div>
 {%endblock%}

@@ -1,5 +1,5 @@
-{% macro displayPitches(pitches_list)%}
-    {%for pitch in pitches_list%}
+{% macro pitchesDisplay(pitcheslist)%}
+    {%for pitch in pitcheslist%}
         <div class="col-xs-12 col-sm-4 col-md-6 mx-auto col-lg-4 review-card">
             <div class="well well-lg">
                 <h4>{{pitch.pitch_title}}</h4>
@@ -9,7 +9,6 @@
         </div>
     {%endfor%}
 {%endmacro%}
-
 {%macro displayComments(comments_list)%}
     {%for comment in comments_list%}
         <div class="col-md-12">
