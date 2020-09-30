@@ -9,7 +9,7 @@ import datetime
 @main.route('/')
 def index():
 
-    title = 'Home - Welcome to Perfect Pitch'
+    title = 'Welcome to Pitches Site'
     interview_piches = Pitch.get_pitches('interview')
     product_piches = Pitch.get_pitches('product')
     promotion_pitches = Pitch.get_pitches('promotion')
@@ -67,9 +67,7 @@ def add_pitch():
         category = pitch_form.category.data
         new_pitch = Pitch(pitch_title=title,pitch_content=pitch,category=category,user=current_user,likes=0,dislikes=0)
         new_pitch.save_pitch()
-        return redirect(url_for('.index'))
-
-    title = 'New pitch'
+        return redirect(url_for('main.index'))
     return render_template('new_pitch.html',title = title,pitch_form=pitch_form )
 
 @main.route('/pitches/interview_pitches')
@@ -132,6 +130,4 @@ def user_pitches(name):
     user = User.query.filter_by(username=name).first()
     pitches = Pitch.query.filter_by(user_id = user.id).all()
     
-    
-
     return render_template("profile/pitches.html", user=user,pitches=pitches)
