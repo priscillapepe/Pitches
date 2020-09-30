@@ -2,7 +2,7 @@ from app.models import Comment,User,Pitch
 from app import db
 import unittest
 
-class CommentModelTest(unittest.TestCase):
+class CommeTest(unittest.TestCase):
     def setUp(self):
         self.user_Pepe = User(username = 'Pepe',password = 'potato', email = 'pepe@ms.com')
         self.new_pitch = Pitch(id=1,pitch_title='Test',pitch_content='This is a test pitch',category="interview",user = self.user_Pepe,likes=0,dislikes=0)
